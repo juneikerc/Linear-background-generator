@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Background generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    
+    <h1 class="title" id="title">Linear Background-generator</h1>
+
+    <div class="container-color">
+      
+      <div class="color-left" id="colorLeft">
+        <span class="color-l"></span>
+        <div class="inputs-left">
+          <label for="red">
+            <span class="span-text">Red</span> 
+            <input type="range" name="red" id="inputLeftRed" min="0" max="256" value="153">
+          </label>
+          <label for="green">
+            <span class="span-text">Green</span> 
+            <input type="range" name="green" id="inputLeftGreen" min="0" max="256" value="0">
+          </label>
+          <label for="blue">
+            <span class="span-text">Blue</span> 
+            <input type="range" name="blue" id="inputLeftBlue" min="0" max="256" value="255">
+          </label>
+        </div>
+      </div>
+
+      <div class="color-right" id="colorRight">
+        <span class="color-r"></span>
+        <div class="inputs-right">
+          <label for="red">
+            <span class="span-text">Red</span> 
+            <input type="range" name="red" id="inputRightRed" min="0" max="256" value="0">
+          </label>
+          <label for="green">
+            <span class="span-text">Green</span> 
+            <input type="range" name="green" id="inputRightGreen" min="0" max="256" value="200">
+          </label>
+          <label for="blue">
+            <span class="span-text">Blue</span> 
+            <input type="range" name="blue" id="inputRightBlue" min="0" max="256" value="250">
+          </label>
+        </div>
+      </div>
+      
+    </div>
+
+    <p class="background-text" id="textBackground"> background: linear-gradient(to right,rgb(153, 0, 255), rgb(0, 200, 250));</p>
+   
+    
+    
+  </main>
+
+  
+  <script src="app.js"></script>
+</body>
+</html>

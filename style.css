@@ -1,0 +1,69 @@
+:root{
+  --red-left: 153;
+  --green-left: 0;
+  --blue-left:255;
+
+  --red-right: 0;
+  --green-right: 200;
+  --blue-right:250;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to right,rgb(var(--red-left), var(--green-left), var(--blue-left)), rgb(var(--red-right), var(--green-right), var(--blue-right)));
+}
+
+.title{
+  text-align: center;
+  padding: 2rem;
+  color: hsl(200,10%,20%);
+}
+
+.container-color{
+  width: 90%;
+  max-width: 1020px;
+  margin: 0 auto 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 2rem;
+}
+
+.color-left,.color-right{
+  text-align: center;
+}
+
+.inputs-left,.inputs-right{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+label{
+  display: flex;
+  flex-direction: column;
+}
+
+.color-l,.color-r{
+  padding: .5rem 1rem;
+  border: 1px solid aliceblue;
+}
+
+.color-l{
+  background: rgb(var(--red-left), var(--green-left), var(--blue-left));
+}
+
+.color-r{
+  background: rgb(var(--red-right), var(--green-right), var(--blue-right));
+}
+
+.background-text{
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback';
+  color: hsl(200,10%,20%);
+  
+}
