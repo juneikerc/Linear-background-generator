@@ -35,12 +35,43 @@ const changeColorRight = event => {
   writeText()
 }
 
+const copyToClipboard = e => {
+  const copy = navigator.clipboard.writeText(pText.textContent)
+  
+  copy.then( res => {
+    const correct = document.createElement('p')
+    correct.classList.add('copiado')
+    correct.textContent = `Fue copiado al portapapeles con exito`
+
+    document.querySelector('.div-text').appendChild(correct)
+
+    setTimeout(() => {
+      document.querySelector('.copiado').remove()
+    },2000)
+
+  } ).catch( err => {
+    const error = document.createElement('p')
+    error.classList.add('error')
+    error.textContent = `Hubo un error al copiar vuelve a intentarlo`
+    
+    document.querySelector('.div-text').appendChild(correct)
+
+    setTimeout(() => {
+      document.querySelector('.error').remove()
+    },2000)
+
+  } )
+  
+}
+
 const runEVents = () => {
   const colorLeft = document.getElementById('colorLeft')
   const colorRight = document.getElementById('colorRight')
+  const btnCopy = document.getElementById('btnCopy')
   
   colorLeft.addEventListener('input',changeColorLeft)
   colorRight.addEventListener('input',changeColorRight)
+  btnCopy.addEventListener('click',copyToClipboard)
   
 }
 
